@@ -324,7 +324,7 @@ export default function Home() {
 <img
   src="/images/badminton-legacy.jpg"
   />
-  alt="Badminton Legacy"
+  alt="badminton Legacy"
   style={{
     adminton Legacy"
   style={{
