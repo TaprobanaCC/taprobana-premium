@@ -288,12 +288,12 @@ export default function Home() {
 
   <article className="feature-card">
     <img
-  src="/images/supun.jpg"
-  alt="About Taprobana"
-style={{
-  width: "100%",
-  borderRadius: "16px"
-}}
+      src="/images/supun.jpg"
+      alt="About Taprobana"
+      style={{
+        width: "100%",
+        borderRadius: "16px"
+      }}/>
 
     <h3>About Taprobana</h3>
 
