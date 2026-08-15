@@ -292,7 +292,7 @@ export default function Home() {
                 alt="About Taprobana"
                 style={{
                   width: "100%",
-                  borderRadius
+                  borderRadius: "16px"
 
               <h3>About Taprobana</h3>
 
