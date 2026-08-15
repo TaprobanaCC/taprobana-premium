@@ -284,9 +284,48 @@ export default function Home() {
       {view === 'visitor' && (
         <section className="content-section">
           <h1>Visitor Pavilion</h1>
-          <div className="cards-grid">
-            {['About Taprobana', 'Since 2013', 'Our Victories', 'Hall of Fame', 'Gallery', 'Sponsors', 'Contact Committee', 'Event Highlights'].map((title) => <article className="feature-card" key={title}><h3>{title}</h3><p>Premium public content area prepared for launch night. Update copy, photos and videos from the admin plan in the next build.</p></article>)}
-          </div>
+<div className="cards-grid">
+
+  <article className="feature-card">
+    <imgges/supun.jpg
+
+    <h3>About Taprobana</h3>
+
+    <p>
+      Founded in 2013, Taprobana Sports Club has grown into one of the most
+      active Sri Lankan sporting communities in the UAE.
+      Built on friendship, sportsmanship and community values,
+      the club continues to unite members through sport,
+      social events and community engagement.
+    </p>
+  </article>
+
+  <article className="feature-card">
+    <h3>Since 2013</h3>
+
+    <p>
+      For more than a decade, Taprobana Sports Club has created
+      opportunities for friendship, sporting excellence,
+      leadership and community development among Sri Lankans living
+      in the United Arab Emirates.
+    </p>
+  </article>
+
+  <article className="feature-card">
+    /images/cricket-legacy.jpg
+
+    /images/badminton-legacy.jpg
+
+    <h3>Our Victories</h3>
+
+    <p>
+      Through cricket, badminton and community events,
+      Taprobana Sports Club has built a proud legacy of
+      championships, achievements and unforgettable moments.
+    </p>
+  </article>
+
+</div>
         </section>
       )}
 
