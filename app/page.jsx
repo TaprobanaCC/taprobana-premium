@@ -287,7 +287,12 @@ export default function Home() {
 
           <div className="cards-grid">
             <article className="feature-card">
-              /images/supun.jpg
+              <img
+                src="/images/supun.jpg"
+                alt="About Taprobana"
+                style={{
+                  width: "100%",
+                  borderRadius
 
               <h3>About Taprobana</h3>
 
@@ -318,10 +323,17 @@ export default function Home() {
                   gap: "12px",
                   marginBottom: "16px"
                 }}
-              >
-                /images/cricket-legacy.jpg
-
-                /images/badminton-legacy.jpg
+              ><div
+            style={{
+              display: "grid",
+              gap: "12px",
+              marginBottom: "16px"
+            }}
+          >
+            <images/cricket-legacy.jpg
+          
+            <img
+              src="/images/badminton-legacy.jpg
               </div>
 
               <h3>Our Victories</h3>
