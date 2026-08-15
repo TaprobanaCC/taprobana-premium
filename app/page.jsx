@@ -320,14 +320,21 @@ export default function Home() {
   <article className="feature-card">
     <img
   src="/images/cricket-legacy.jpg"
-  alt="Cricket Legacy
+  alt="Cricket Legacy    
+  style={{
+    width: "100%",
+  borderRadius: "16px"
+}}
+/>
 
    <img
   src="/images/badminton-legacy.jpg"
   alt="Badminton Legacy"
   style={{
-    width: "100
-
+    width: "100%",
+  borderRadius: "16px"
+}}
+/>
     <h3>Our Victories</h3>
 
     <p>
