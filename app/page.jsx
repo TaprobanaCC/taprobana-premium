@@ -287,7 +287,7 @@ export default function Home() {
 <div className="cards-grid">
 
   <article className="feature-card">
-    <imgges/supun.jpg
+    <images/supun.jpg
 
     <h3>About Taprobana</h3>
 
