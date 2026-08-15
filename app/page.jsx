@@ -282,129 +282,190 @@ export default function Home() {
       )}
 
       {view === 'visitor' && (
-  <section className="content-section">
-    <h1>Visitor Pavilion</h1>
+        <section className="content-section">
+          <h1>Visitor Pavilion</h1>
 
-    <div className="cards-grid">
-      <article className="feature-card">
-<img
-  src="/images/supun.jpg"
-  />
-  alt="About 
+          <div className="cards-grid">
+            <article className="feature-card">
+              /images/supun.jpg
 
-        <h3>About Taprobana</h3>
+              <h3>About Taprobana</h3>
 
-        <p>
-          Founded in 2013, Taprobana Sports Club has grown into one of the most
-          active Sri Lankan sporting communities in the UAE. Built on friendship,
-          sportsmanship and community values, the club continues to unite members
-          through sport, social events and community engagement.
-        </p>
-      </article>
+              <p>
+                Founded in 2013, Taprobana Sports Club has grown into one of the
+                most active Sri Lankan sporting communities in the UAE. Built on
+                friendship, sportsmanship and community values, the club continues
+                to unite members through sport, social events and community
+                engagement.
+              </p>
+            </article>
 
-      <article className="feature-card">
-        <h3>Since 2013</h3>
+            <article className="feature-card">
+              <h3>Since 2013</h3>
 
-        <p>
-          For more than a decade, Taprobana Sports Club has created opportunities
-          for friendship, sporting excellence, leadership and community development
-          among Sri Lankans living in the United Arab Emirates.
-        </p>
-      </article>
+              <p>
+                For more than a decade, Taprobana Sports Club has created
+                opportunities for friendship, sporting excellence, leadership and
+                community development among Sri Lankans living in the United Arab
+                Emirates.
+              </p>
+            </article>
 
-      <article className="feature-card">
-<img
-  src="/images/cricket-legacy.jpg"
-  />
-  alt="Cricket Legacy"
-  style={{
-    adminton Legacy"
-  style={{
-    width:
-<img
-  src="/images/badminton-legacy.jpg"
-  />
-  alt="badminton Legacy"
-  style={{
-    adminton Legacy"
-  style={{
-    width:
+            <article className="feature-card">
+              <div
+                style={{
+                  display: "grid",
+                  gap: "12px",
+                  marginBottom: "16px"
+                }}
+              >
+                /images/cricket-legacy.jpg
 
-        <h3>Our Victories</h3>
+                /images/badminton-legacy.jpg
+              </div>
 
-        <p>
-          Through cricket, badminton and community events, Taprobana Sports Club
-          has built a proud legacy of championships, achievements and unforgettable
-          moments.
-        </p>
-      </article>
+              <h3>Our Victories</h3>
 
-      <article className="feature-card">
-        <h3>Hall of Fame</h3>
+              <p>
+                Through cricket, badminton and community events, Taprobana Sports
+                Club has built a proud legacy of championships, achievements and
+                unforgettable moments.
+              </p>
+            </article>
 
-        <p>
-          Recognising the players, volunteers, committee members, sponsors and
-          supporters who shaped the success story of Taprobana Sports Club.
-        </p>
-      </article>
+            <article className="feature-card">
+              <h3>Hall of Fame</h3>
 
-      <article className="feature-card">
-        <h3>Gallery</h3>
+              <p>
+                Recognising the players, volunteers, committee members, sponsors
+                and supporters who shaped the success story of Taprobana Sports
+                Club.
+              </p>
+            </article>
 
-        <p>
-          Explore our journey through photographs and memories from tournaments,
-          annual gatherings, family events and club milestones.
-        </p>
-      </article>
+            <article className="feature-card">
+              <h3>Gallery</h3>
 
-      <article className="feature-card">
-        <h3>Sponsors</h3>
+              <p>
+                Explore our journey through photographs and memories from
+                tournaments, annual gatherings, family events and club milestones.
+              </p>
+            </article>
 
-        <p>
-          We proudly acknowledge the generous sponsors and partners whose support
-          continues to strengthen our community initiatives.
-        </p>
-      </article>
+            <article className="feature-card">
+              <h3>Sponsors</h3>
 
-      <article className="feature-card">
-        <h3>Contact Committee</h3>
+              <p>
+                We proudly acknowledge the generous sponsors and partners whose
+                support continues to strengthen our community initiatives.
+              </p>
+            </article>
 
-        <p>
-          Connect with the Taprobana committee for membership inquiries,
-          partnerships, events, volunteering and community initiatives.
-        </p>
-      </article>
+            <article className="feature-card">
+              <h3>Contact Committee</h3>
 
-      <article className="feature-card">
-        <h3>Event Highlights</h3>
+              <p>
+                Connect with the Taprobana committee for membership inquiries,
+                partnerships, events, volunteering and community initiatives.
+              </p>
+            </article>
 
-        <p>
-          Stay connected with our tournaments, annual gatherings, corporate
-          matches, member activities and community celebrations.
-        </p>
-      </article>
-    </div>
-  </section>
-)}
+            <article className="feature-card">
+              <h3>Event Highlights</h3>
+
+              <p>
+                Stay connected with our tournaments, annual gatherings, corporate
+                matches, member activities and community celebrations.
+              </p>
+            </article>
+          </div>
+        </section>
+      )}
+
       {view === 'auth' && (
         <section className="auth-wrap">
           <div className="auth-card">
             <h1>{mode === 'login' ? 'Member Login' : 'Create Founding Member Account'}</h1>
             <p>Register during launch and enter the Taprobana Member Pavilion.</p>
-            {mode === 'signup' && <input placeholder="Full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />}
-            <input placeholder="Email" type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-            {mode === 'signup' && <input placeholder="Mobile" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />}
-            {mode === 'signup' && <input placeholder="Profession" value={form.profession} onChange={(e) => setForm({ ...form, profession: e.target.value })} />}
-            {mode === 'signup' && <input placeholder="Company" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} />}
-            <input placeholder="Password" type="password" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} />
-            {mode === 'signup' && <input placeholder="Confirm password" type="password" value={form.confirm} onChange={(e) => setForm({ ...form, confirm: e.target.value })} />}
-            <button className="gold-button full" disabled={busy} onClick={mode === 'login' ? login : signUp}>{busy ? 'Processing...' : mode === 'login' ? 'Login' : 'Create Account'}</button>
-            <button className="link-button" onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}>{mode === 'login' ? 'New member? Create account' : 'Already registered? Login'}</button>
-            {!isSupabaseConfigured && <LoadingBadge>Demo mode: add Supabase env variables in Vercel for real accounts</LoadingBadge>}
+
+            {mode === 'signup' && (
+              <input
+                placeholder="Full name"
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+              />
+            )}
+
+            <input
+              placeholder="Email"
+              type="email"
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+            />
+
+            {mode === 'signup' && (
+              <input
+                placeholder="Mobile"
+                value={form.phone}
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+              />
+            )}
+
+            {mode === 'signup' && (
+              <input
+                placeholder="Profession"
+                value={form.profession}
+                onChange={(e) => setForm({ ...form, profession: e.target.value })}
+              />
+            )}
+
+            {mode === 'signup' && (
+              <input
+                placeholder="Company"
+                value={form.company}
+                onChange={(e) => setForm({ ...form, company: e.target.value })}
+              />
+            )}
+
+            <input
+              placeholder="Password"
+              type="password"
+              value={form.password}
+              onChange={(e) => setForm({ ...form, password: e.target.value })}
+            />
+
+            {mode === 'signup' && (
+              <input
+                placeholder="Confirm password"
+                type="password"
+                value={form.confirm}
+                onChange={(e) => setForm({ ...form, confirm: e.target.value })}
+              />
+            )}
+
+            <button
+              className="gold-button full"
+              disabled={busy}
+              onClick={mode === 'login' ? login : signUp}
+            >
+              {busy ? 'Processing...' : mode === 'login' ? 'Login' : 'Create Account'}
+            </button>
+
+            <button
+              className="link-button"
+              onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}
+            >
+              {mode === 'login' ? 'New member? Create account' : 'Already registered? Login'}
+            </button>
+
+            {!isSupabaseConfigured && (
+              <LoadingBadge>
+                Demo mode: add Supabase env variables in Vercel for real accounts
+              </LoadingBadge>
+            )}
           </div>
         </section>
       )}
-
       {view === 'dashboard' && user && (
         <section className="dashboard">
           <header className="dashboard-hero">
