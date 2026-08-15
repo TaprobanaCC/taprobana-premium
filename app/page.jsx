@@ -36,24 +36,32 @@ function membershipNumber(profile, user) {
 function LoadingBadge({ children }) {
   return <span className="pill loading-pill">{children}</span>;
 }
-
 function VideoTile({ id, title }) {
-  const videoUrl = `https://www.youtube.com/embed/${id}`;
+  const baseUrl = 'https://' + 'www.youtube.com/embed/';
+  const videoUrl = baseUrl + id;
+
   return (
-    <div className="video-tile">
+    <div
+      style={{
+        background: 'rgba(255,255,255,.035)',
+        border: '1px solid rgba(246,211,107,.18)',
+        borderRadius: '18px',
+        padding: '10px'
+      }}
+    >
       <iframe
         src={videoUrl}
         title={title}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-        loading="lazy"
-      />
-      <p>{title}</p>
+        allowFullScreenWeight: 800
+        }}
+      >
+        {title}
+      </p>
     </div>
   );
 }
-
 export default function Home() {
   const [stage, setStage] = useState('prelaunch');
   const [count, setCount] = useState(10);
