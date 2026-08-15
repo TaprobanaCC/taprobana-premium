@@ -321,7 +321,6 @@ export default function Home() {
   <article className="feature-card">
     <img
   src="/images/cricket-legacy.jpg"
-/images/badminton-legacy.jpg"
   alt="Badminton Legacy"
   style={{
     width: "100%",
