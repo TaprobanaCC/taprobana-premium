@@ -308,33 +308,18 @@ export default function Home() {
   </article>
 
   <article className="feature-card">
-    <h3>Since 2013</h3>
+  /images/cricket-legacy.jpg
 
-    <p>
-      For more than a decade, Taprobana Sports Club has created
-      opportunities for friendship, sporting excellence,
-      leadership and community development among Sri Lankans living
-      in the United Arab Emirates.
-    </p>
-  </article>
+  /images/badminton-legacy.jpg
 
-  <article className="feature-card">
-    <img
-  src="/images/cricket-legacy.jpg"
-  alt="Badminton Legacy"
-  style={{
-    width: "100%",
-    borderRadius: "
-/>
+  <h3>Our Victories</h3>
 
-   <img
-  src="/images/badminton-legacy.jpg"
-  alt="Badminton Legacy"
-  style={{
-    width: "100%",
-  borderRadius: "16px"
-}}
-/>
+  <p>
+    Through cricket, badminton and community events,
+    Taprobana Sports Club has built a proud legacy of
+    championships, achievements and unforgettable moments.
+  </p>
+</article>
     <h3>Our Victories</h3>
 
     <p>
