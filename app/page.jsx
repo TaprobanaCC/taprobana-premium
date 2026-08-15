@@ -287,7 +287,10 @@ export default function Home() {
 
     <div className="cards-grid">
       <article className="feature-card">
-        /images/supun.jpg
+<img
+  src="/images/supun.jpg"
+  />
+  alt="About 
 
         <h3>About Taprobana</h3>
 
@@ -310,9 +313,22 @@ export default function Home() {
       </article>
 
       <article className="feature-card">
-        /images/cricket-legacy.jpg
-
-        /images/badminton-legacy.jpg
+<img
+  src="/images/cricket-legacy.jpg"
+  />
+  alt="Cricket Legacy"
+  style={{
+    adminton Legacy"
+  style={{
+    width:
+<img
+  src="/images/badminton-legacy.jpg"
+  />
+  alt="Badminton Legacy"
+  style={{
+    adminton Legacy"
+  style={{
+    width:
 
         <h3>Our Victories</h3>
 
@@ -370,6 +386,7 @@ export default function Home() {
     </div>
   </section>
 )}
+      {view === 'auth' && (
         <section className="auth-wrap">
           <div className="auth-card">
             <h1>{mode === 'login' ? 'Member Login' : 'Create Founding Member Account'}</h1>
