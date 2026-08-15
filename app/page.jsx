@@ -290,9 +290,10 @@ export default function Home() {
     <img
   src="/images/supun.jpg"
   alt="About Taprobana"
-  style={{
-    width: "100%",
-    borderRadius: "
+style={{
+  width: "100%",
+  borderRadius: "16px"
+}}
 
     <h3>About Taprobana</h3>
 
