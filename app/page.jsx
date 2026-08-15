@@ -309,8 +309,26 @@ export default function Home() {
             </article>
 
             <article className="feature-card"><h3>Hall of Fame</h3><p>Recognising the players, volunteers, committee members, sponsors and supporters who shaped the success story of Taprobana Sports Club.</p></article>
-            <article className="feature-card"><h3>Gallery</h3><p>Explore our journey through photographs and memories from tournaments, annual gatherings, family events and club milestones.</p></article>
-            <article className="feature-card"><h3>Sponsors</h3><p>We proudly acknowledge the generous sponsors and partners whose support continues to strengthen our community initiatives.</p></article>
+            <article className="feature-card">
+  <h3>Taprobana Match Archive</h3>
+
+  <p>
+    Explore historic Taprobana Sports Club matches, tournament highlights,
+    memorable performances and community cricket moments from our video archive.
+  </p>
+
+  <div className="victory-images">
+
+    <iframe
+      width="100%"
+      height="220"
+      src="https://www.youtube.com/eight="220"
+      src="https://www.youtube.com/embed/3CyoUkxS1hk"
+      title="Taprobanae.com/embed/ixEvpQ75x1A"
+      title="Taprobana Match 3"
+      frameBorder="0"
+      allow
+    <article className="feature-card"><h3>Sponsors</h3><p>We proudly acknowledge the generous sponsors and partners whose support continues to strengthen our community initiatives.</p></article>
             <article className="feature-card"><h3>Contact Committee</h3><p>Connect with the Taprobana committee for membership inquiries, partnerships, events, volunteering and community initiatives.</p></article>
             <article className="feature-card"><h3>Event Highlights</h3><p>Stay connected with our tournaments, annual gatherings, corporate matches, member activities and community celebrations.</p></article>
           </div>
