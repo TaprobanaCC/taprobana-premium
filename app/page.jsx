@@ -287,7 +287,8 @@ export default function Home() {
 
           <div className="cards-grid">
             <article className="feature-card">
-              /images/supun.jpg
+              <img
+ s/supun.jpg
 
               <h3>About Taprobana</h3>
 
@@ -381,7 +382,6 @@ export default function Home() {
           </div>
         </section>
       )}
-
       {view === 'auth' && (
         <section className="auth-wrap">
           <div className="auth-card">
