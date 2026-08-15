@@ -287,12 +287,7 @@ export default function Home() {
 
           <div className="cards-grid">
             <article className="feature-card">
-              <img
-                src="/images/supun.jpg"
-                alt="About Taprobana"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px"
+              /images/supun.jpg
 
               <h3>About Taprobana</h3>
 
@@ -321,19 +316,12 @@ export default function Home() {
                 style={{
                   display: "grid",
                   gap: "12px",
-                  marginBottom: "16px"
+                  marginBottom: "18px"
                 }}
-              ><div
-            style={{
-              display: "grid",
-              gap: "12px",
-              marginBottom: "16px"
-            }}
-          >
-            <images/cricket-legacy.jpg
-          
-            <img
-              src="/images/badminton-legacy.jpg
+              >
+                /images/cricket-legacy.jpg
+
+                /images/badminton-legacy.jpg
               </div>
 
               <h3>Our Victories</h3>
@@ -397,7 +385,12 @@ export default function Home() {
       {view === 'auth' && (
         <section className="auth-wrap">
           <div className="auth-card">
-            <h1>{mode === 'login' ? 'Member Login' : 'Create Founding Member Account'}</h1>
+            <h1>
+              {mode === 'login'
+                ? 'Member Login'
+                : 'Create Founding Member Account'}
+            </h1>
+
             <p>Register during launch and enter the Taprobana Member Pavilion.</p>
 
             {mode === 'signup' && (
@@ -427,7 +420,9 @@ export default function Home() {
               <input
                 placeholder="Profession"
                 value={form.profession}
-                onChange={(e) => setForm({ ...form, profession: e.target.value })}
+                onChange={(e) =>
+                  setForm({ ...form, profession: e.target.value })
+                }
               />
             )}
 
@@ -460,14 +455,20 @@ export default function Home() {
               disabled={busy}
               onClick={mode === 'login' ? login : signUp}
             >
-              {busy ? 'Processing...' : mode === 'login' ? 'Login' : 'Create Account'}
+              {busy
+                ? 'Processing...'
+                : mode === 'login'
+                ? 'Login'
+                : 'Create Account'}
             </button>
 
             <button
               className="link-button"
               onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}
             >
-              {mode === 'login' ? 'New member? Create account' : 'Already registered? Login'}
+              {mode === 'login'
+                ? 'New member? Create account'
+                : 'Already registered? Login'}
             </button>
 
             {!isSupabaseConfigured && (
