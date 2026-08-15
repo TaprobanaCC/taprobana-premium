@@ -282,58 +282,94 @@ export default function Home() {
       )}
 
       {view === 'visitor' && (
-        <section className="content-section">
-          <h1>Visitor Pavilion</h1>
-<div className="cards-grid">
+  <section className="content-section">
+    <h1>Visitor Pavilion</h1>
 
-  <article className="feature-card">
-    <img
-      src="/images/supun.jpg"
-      alt="About Taprobana"
-      style={{
-        width: "100%",
-        borderRadius: "16px"
-      }}
-      />
+    <div className="cards-grid">
+      <article className="feature-card">
+        /images/supun.jpg
 
-    <h3>About Taprobana</h3>
+        <h3>About Taprobana</h3>
 
-    <p>
-      Founded in 2013, Taprobana Sports Club has grown into one of the most
-      active Sri Lankan sporting communities in the UAE.
-      Built on friendship, sportsmanship and community values,
-      the club continues to unite members through sport,
-      social events and community engagement.
-    </p>
-  </article>
+        <p>
+          Founded in 2013, Taprobana Sports Club has grown into one of the most
+          active Sri Lankan sporting communities in the UAE. Built on friendship,
+          sportsmanship and community values, the club continues to unite members
+          through sport, social events and community engagement.
+        </p>
+      </article>
 
-  <article className="feature-card">
-  /images/cricket-legacy.jpg
+      <article className="feature-card">
+        <h3>Since 2013</h3>
 
-  /images/badminton-legacy.jpg
+        <p>
+          For more than a decade, Taprobana Sports Club has created opportunities
+          for friendship, sporting excellence, leadership and community development
+          among Sri Lankans living in the United Arab Emirates.
+        </p>
+      </article>
 
-  <h3>Our Victories</h3>
+      <article className="feature-card">
+        /images/cricket-legacy.jpg
 
-  <p>
-    Through cricket, badminton and community events,
-    Taprobana Sports Club has built a proud legacy of
-    championships, achievements and unforgettable moments.
-  </p>
-</article>
-    <h3>Our Victories</h3>
+        /images/badminton-legacy.jpg
 
-    <p>
-      Through cricket, badminton and community events,
-      Taprobana Sports Club has built a proud legacy of
-      championships, achievements and unforgettable moments.
-    </p>
-  </article>
+        <h3>Our Victories</h3>
 
-</div>
-        </section>
-      )}
+        <p>
+          Through cricket, badminton and community events, Taprobana Sports Club
+          has built a proud legacy of championships, achievements and unforgettable
+          moments.
+        </p>
+      </article>
 
-      {view === 'auth' && (
+      <article className="feature-card">
+        <h3>Hall of Fame</h3>
+
+        <p>
+          Recognising the players, volunteers, committee members, sponsors and
+          supporters who shaped the success story of Taprobana Sports Club.
+        </p>
+      </article>
+
+      <article className="feature-card">
+        <h3>Gallery</h3>
+
+        <p>
+          Explore our journey through photographs and memories from tournaments,
+          annual gatherings, family events and club milestones.
+        </p>
+      </article>
+
+      <article className="feature-card">
+        <h3>Sponsors</h3>
+
+        <p>
+          We proudly acknowledge the generous sponsors and partners whose support
+          continues to strengthen our community initiatives.
+        </p>
+      </article>
+
+      <article className="feature-card">
+        <h3>Contact Committee</h3>
+
+        <p>
+          Connect with the Taprobana committee for membership inquiries,
+          partnerships, events, volunteering and community initiatives.
+        </p>
+      </article>
+
+      <article className="feature-card">
+        <h3>Event Highlights</h3>
+
+        <p>
+          Stay connected with our tournaments, annual gatherings, corporate
+          matches, member activities and community celebrations.
+        </p>
+      </article>
+    </div>
+  </section>
+)}
         <section className="auth-wrap">
           <div className="auth-card">
             <h1>{mode === 'login' ? 'Member Login' : 'Create Founding Member Account'}</h1>
