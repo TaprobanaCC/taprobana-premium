@@ -81,6 +81,7 @@ const videos = [
 
 function membershipNumber(profile, user) {
   const source = profile?.membership_no || user?.id || '000001';
+
   const suffix = source
     .replace(/[^a-zA-Z0-9]/g, '')
     .slice(0, 6)
@@ -95,6 +96,8 @@ function LoadingBadge({ children }) {
 }
 
 function VideoTile({ id, title }) {
+  const videoUrl = ['https://www.youtube.com/embed/', id].join('');
+
   return (
     <div
       style={{
@@ -104,15 +107,24 @@ function VideoTile({ id, title }) {
         padding: '10px'
       }}
     >
-      <iframe
-        width="100%"
-        height="220"
-        src={`https://www.youtube.com/embed/${id}`}
-        title={title}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-        loading function Home() {
+      {videoUrl}        }}
+      />
+
+      <p
+        style={{
+          margin: '10px 0 0',
+          fontSize: '13px',
+          color: '#f6d36b',
+          fontWeight: 800
+        }}
+      >
+        {title}
+      </p>
+    </div>
+  );
+}
+
+export default function Home() {
   const [stage, setStage] = useState('prelaunch');
   const [count, setCount] = useState(10);
   const [view, setView] = useState('home');
@@ -329,4 +341,96 @@ function VideoTile({ id, title }) {
           company: form.company
         }
       }
-   
+    });
+
+    setBusy(false);
+
+    if (error) {
+      return setMessage(error.message);
+    }
+
+    if (data?.user) {
+      await supabase.from('profiles').upsert({
+        id: data.user.id,
+        email: form.email,
+        full_name: form.name,
+        phone: form.phone,
+        profession: form.profession,
+        company: form.company,
+        role: isAdminEmail(form.email) ? 'admin' : 'member',
+        status: 'active',
+        founding_member: true,
+        membership_no: `TCC-2026-${data.user.id.slice(0, 6).toUpperCase()}`
+      });
+
+      setMessage(
+        'Account created. If email confirmation is enabled, verify your email, then log in.'
+      );
+
+      setMode('login');
+    }
+  }
+
+  async function login() {
+    setMessage('');
+
+    if (!form.email || !form.password) {
+      return setMessage('Please enter email and password.');
+    }
+
+    if (!isSupabaseConfigured || !supabase) {
+      const demoUser = {
+        id: crypto.randomUUID(),
+        email: form.email
+      };
+
+      setUser(demoUser);
+
+      setProfile({
+        id: demoUser.id,
+        email: form.email,
+        full_name: form.name || 'Founding Member',
+        role: isAdminEmail(form.email) ? 'admin' : 'member',
+        status: 'active',
+        founding_member: true
+      });
+
+      setView('dashboard');
+
+      return setMessage('Demo mode active. Supabase is not connected yet.');
+    }
+
+    setBusy(true);
+
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: form.email,
+      password: form.password
+    });
+
+    setBusy(false);
+
+    if (error) {
+      return setMessage(error.message);
+    }
+
+    setUser(data.user);
+    setView('dashboard');
+  }
+
+  async function signOut() {
+    if (isSupabaseConfigured && supabase) {
+      await supabase.auth.signOut();
+    }
+
+    setUser(null);
+    setProfile(null);
+    setView('home');
+    setMessage('Signed out successfully.');
+  }
+
+  async function updateProfile() {
+    if (!user) return;
+
+    const updated = {
+      ...profile,
+      full_name: form
