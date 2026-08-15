@@ -309,7 +309,7 @@ export default function Home() {
             </article>
 
             <article className="feature-card"><h3>Hall of Fame</h3><p>Recognising the players, volunteers, committee members, sponsors and supporters who shaped the success story of Taprobana Sports Club.</p></article>
-            <article className="feature-card">
+<article className="feature-card" style={{ gridColumn: "span 2" }}>
   <h3>Taprobana Match Archive</h3>
 
   <p>
@@ -317,18 +317,96 @@ export default function Home() {
     memorable performances and community cricket moments from our video archive.
   </p>
 
-  <div className="victory-images">
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+      gap: "16px",
+      marginTop: "18px"
+    }}
+  >
+    <div>
+      <iframe
+        width="100%"
+        height="220"
+        src="https://www.youtube.com/embed/rFqM4aJ9Oww"
+        title="The Blues by Taprobana Division 1 Champions Final Highlights"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        loading="lazy"
+        style={{
+          borderRadius: "16px",
+          border: "1px solid rgba(246,211,107,.22)"
+        }}
+      />
+      <p style={{ marginTop: "8px", fontSize: "13px" }}>
+        Division 1 Champions Final Highlights
+      </p>
+    </div>
 
-    <iframe
-      width="100%"
-      height="220"
-      src="https://www.youtube.com/eight="220"
-      src="https://www.youtube.com/embed/3CyoUkxS1hk"
-      title="Taprobanae.com/embed/ixEvpQ75x1A"
-      title="Taprobana Match 3"
-      frameBorder="0"
-      allow
-    <article className="feature-card"><h3>Sponsors</h3><p>We proudly acknowledge the generous sponsors and partners whose support continues to strengthen our community initiatives.</p></article>
+    <div>
+      <iframe
+        width="100%"
+        height="220"
+        src="https://www.youtube.com/embed/3CyoUkxS1hk"
+        title="Sudara Performance Highlights"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        loading="lazy"
+        style={{
+          borderRadius: "16px",
+          border: "1px solid rgba(246,211,107,.22)"
+        }}
+      />
+      <p style={{ marginTop: "8px", fontSize: "13px" }}>
+        Player Performance Highlights
+      </p>
+    </div>
+
+    <div>
+      https://www.youtube.com/embed/ixEvpQ75x1A        }}
+      />
+      <p style={{ marginTop: "8px", fontSize: "13px" }}>
+        Division 4 Champions Journey
+      </p>
+    </div>
+
+    <div>
+      https://www.youtube.com/embed/LKdtp5FMLyk        }}
+      />
+      <p style={{ marginTop: "8px", fontSize: "13px" }}>
+        Taprobana Cricket Club Legacy
+      </p>
+    </div>
+
+    <div>
+      https://www.youtube.com/embed/u7cx0ourLfA        }}
+      />
+      <p style={{ marginTop: "8px", fontSize: "13px" }}>
+        Super 12 Decider Highlights
+      </p>
+    </div>
+
+    <div>
+      https://www.youtube.com/embed/3ZVwarpkiUI        }}
+      />
+      <p style={{ marginTop: "8px", fontSize: "13px" }}>
+        Division 2 Semi Final Highlights
+      </p>
+    </div>
+
+    <div>
+      https://www.youtube.com/embed/nh1ix-6HNDc        }}
+      />
+      <p style={{ marginTop: "8px", fontSize: "13px" }}>
+        Division 2 Final Highlights
+      </p>
+    </div>
+  </div>
+</article>
+            <article className="feature-card"><h3>Sponsors</h3><p>We proudly acknowledge the generous sponsors and partners whose support continues to strengthen our community initiatives.</p></article>
             <article className="feature-card"><h3>Contact Committee</h3><p>Connect with the Taprobana committee for membership inquiries, partnerships, events, volunteering and community initiatives.</p></article>
             <article className="feature-card"><h3>Event Highlights</h3><p>Stay connected with our tournaments, annual gatherings, corporate matches, member activities and community celebrations.</p></article>
           </div>
